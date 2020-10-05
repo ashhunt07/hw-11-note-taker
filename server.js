@@ -1,13 +1,7 @@
 // Dependencies
 const express = require("express");
-
-//sets up the path to load an html file
-const path = require("path");
-
-//will help setting up promises for reading and writing files
-const util = require('util');
-
-//
+const path = require("path"); //sets up the path to load an html file
+const util = require('util'); //will help setting up promises for reading and writing files
 const fs = require("fs");
 
 // Sets up the Express App and PORT
@@ -64,9 +58,7 @@ app.post("/api/notes", (req, res) => {
             return Promise.resolve(JSON.parse(result));
         })
         .then(data => {
-
             newNote.id = getLastIndex(data) + 1;
-
             (data.length > 0) ? data.push(newNote): data = [newNote];
             return Promise.resolve(data);
         })
@@ -92,12 +84,10 @@ app.delete('/api/notes/:id', (req, res) => {
             return Promise.resolve(JSON.parse(result));
         })
         .then(data => {
-
             data.splice(data.indexOf(data.find(element => element.id == id)), 1);
             return Promise.resolve(data);
         })
         .then(data => {
-
             writeFileAsync("./db/db.json", JSON.stringify(data));
             res.send("OK");
         })
@@ -109,7 +99,7 @@ app.delete('/api/notes/:id', (req, res) => {
 
 // Console log if user gets a 404 message
 app.use(function(req, res, next) {
-    res.status(404).send("Sorry, we couldn't find that!")
+    res.status(404).send("Sorry, this content could not be found.")
 })
 
 
@@ -121,6 +111,7 @@ function getLastIndex(data) {
 // Starts the server to begin listening
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
+    // console.log(`${req.protocol}://${req.get('host')}`);
 });
 
 

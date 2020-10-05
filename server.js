@@ -81,6 +81,39 @@ app.post("/api/notes", (req, res) => {
 });
 
 
+//Deletes saved note
+app.delete('/api/notes/:id', (req, res) => {
+
+    let id = req.params.id;
+
+    readFileAsync("./db/db.json", "utf8")
+        .then((result, err) => {
+            if (err) console.log(err);
+            return Promise.resolve(JSON.parse(result));
+        })
+        .then(data => {
+
+            data.splice(data.indexOf(data.find(element => element.id == id)), 1);
+            return Promise.resolve(data);
+        })
+        .then(data => {
+
+            writeFileAsync("./db/db.json", JSON.stringify(data));
+            res.send("OK");
+        })
+        .catch(err => {
+            if (err) throw err;
+        });
+});
+
+
+
+
+function getLastIndex(data) {
+    if (data.length > 0) return data[data.length - 1].id;
+    return 0;
+}
+
 // Starts the server to begin listening
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);

@@ -54,6 +54,31 @@ app.get("*", (req, res) => {
 });
 
 
+//Saves a note
+app.post("/api/notes", (req, res) => {
+    let newNote = req.body;
+
+    readFileAsync("./db/db.json", "utf8")
+        .then((result, err) => {
+            if (err) console.log(err);
+            return Promise.resolve(JSON.parse(result));
+        })
+        .then(data => {
+
+            newNote.id = getLastIndex(data) + 1;
+
+            (data.length > 0) ? data.push(newNote): data = [newNote];
+            return Promise.resolve(data);
+        })
+        .then(data => {
+            //write the new file
+            writeFileAsync("./db/db.json", JSON.stringify(data));
+            res.json(newNote);
+        })
+        .catch(err => {
+            if (err) throw err;
+        });
+});
 
 
 // Starts the server to begin listening

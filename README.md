@@ -1,10 +1,6 @@
 # hw-11-note-taker
 
 
-npm init
-- creates a package json, that's it
-- need when running a node app
-
 npm install 
 - with no paramerters will just be sure you pull down dependancies listed in the json file
 - only run if there are existing dependancies in the json file
@@ -14,11 +10,23 @@ npm install (package name)
 - Just add in each package with the name of the package
 
 
-Keey the JSON package in here so your team can see the dependancies and know what to install
 
-package json lock
-- should be commited with the repo
-- this locks in versions of some
+Install Nodemon
+npm i -D nodemon
+
+Add/Edit scripts in package.json
+   "start": "node index",
+    "dev": "nodemon index"
+
+
+This allows the server to restart after each change/save automatically rather than having to stop and restart your server during development. 
+
+The "start" script is for when the application is live on a server. 
+
+The "dev" script is for local use only. 
+
+
+
 
 
 

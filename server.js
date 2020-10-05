@@ -107,6 +107,10 @@ app.delete('/api/notes/:id', (req, res) => {
 });
 
 
+// Console log if user gets a 404 message
+app.use(function(req, res, next) {
+    res.status(404).send("Sorry, we couldn't find that!")
+})
 
 
 function getLastIndex(data) {

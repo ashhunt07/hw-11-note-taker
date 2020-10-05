@@ -102,13 +102,18 @@ Follow these guidelines for committing:
 
 We would like you to have well over 200 commits by graduation, so commit early and often!
 
-## Submission on BCS
+## Deployed URL
 
-You are required to submit the following:
 
-* The URL of the deployed application. This should be the link to the url provided by Heroku. Be sure not to submit a link to the Heroku dashboard.
+>[Herkou Application](https://drive.google.com/file/d/1BkkBG4wP7MNilpQi8_ILptr6n8qCEa_J/view?usp=sharing)
 
-* The URL of the GitHub repository
+>[GitHub Repo](https://ashhunt07.github.io/hw-10-employee-summary/output/team.html)
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+<br><br>
+
+
+#### Contributor
+##### Ashley Hunt
+##### * [GitHub](https://github.com/ashhunt07)
+##### * [Contact](https://ashhunt07.github.io/portfolio/contact.html)

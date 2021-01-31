@@ -5,12 +5,36 @@ body {
     padding: 0;
 }
 
+.home{
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/lined_paper.png");
+}
+
+
+nav, .navbar{
+    background-color: rgb(74, 0, 124) !important;
+}
+
+.navbar-brand{
+    color: #fff !important;
+    font-size: 2em;
+    padding-left: 10px;
+    font-family: 'Comfortaa', cursive;
+}
+
 .save-note {
     display: none;
 }
 
 .jumbotron {
-    background-color: #fff;
+    background-color: transparent;
+}
+
+.display-4{
+    font-family: 'Comfortaa', cursive;
+}
+
+.btn{
+    background-color: rgb(139, 22, 218) !important;
 }
 
 .icons i {
@@ -22,7 +46,7 @@ body {
 
 .note-textarea,
 .note-title {
-    color: #333;
+    color: rgb(32, 0, 53);
     width: 100%;
     outline: none;
     border: none;
@@ -36,13 +60,18 @@ body {
 
 .note-title {
     height: 50px;
-    margin-top: 13px;
+    margin-top: .75em;
     font-size: 3rem;
+    font-family: 'Comfortaa', cursive;
 }
 
 .note-title:read-only,
 .note-textarea:read-only {
-    color: #fff;
+    color: rgb(32, 0, 53);
+}
+
+.note-title:read-only{
+    font-family: 'Comfortaa', cursive;
 }
 
 .list-container .card {

@@ -28,13 +28,18 @@ npm install (package name)
 
 ## Install Nodemon
 ```
-npm i -D nodemon
+npm install -g nodemon
+npm install --save-dev nodemon
 ```
 After installing you will need to check your package.json file and make sure the following code is in place: 
 ```
 Add/Edit scripts in package.json
-   "start": "node index",
-    "dev": "nodemon index"
+   "start": "node server",
+    "dev": "nodemon server"
+```
+Run Nodemon
+```
+npx nodemon
 ```
 
 >This will allow the server to restart after each change/save automatically rather than having to stop and restart your server during development.> 

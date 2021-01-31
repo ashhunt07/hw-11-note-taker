@@ -60,7 +60,7 @@ Add/Edit scripts in package.json
 ## Deployed URL & Code
 
 
->[Herkou Application](https://dashboard.heroku.com/apps/guarded-harbor-89636)
+>[Herkou Application](https://guarded-harbor-89636.herokuapp.com/notes)
 
 >[GitHub Repo](https://github.com/ashhunt07/hw-11-note-taker)
 
